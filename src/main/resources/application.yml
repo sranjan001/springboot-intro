@@ -4,15 +4,8 @@ server:
 logging:
   level:
     org.apache.catalina: info
-
----
-spring:
-  config:
-    activate:
-      on-profile: prod
-server:
-  port: 9000
-
+app:
+  msg: DEV
 
 
 

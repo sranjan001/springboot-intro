@@ -1,5 +1,6 @@
 package com.vmware.springtraining.springbootintro;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -18,9 +19,12 @@ public class SpringbootIntroApplication {
     @RequestMapping("/api")
     public class ApiController {
 
+        @Value("${app.msg}")
+        private String msg;
+
         @GetMapping("/greeting")
         public String getGreeting() {
-            return "Hello world from API";
+            return msg;
         }
     }
 }
