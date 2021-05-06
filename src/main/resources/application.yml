@@ -1,11 +1,22 @@
 server:
   port: 8000
+#  ssl:
+#    key-store: classpath:keystore.jks
+#    key-store-password: password
+#    key-store-type: JKS
+#    key-alias: hjkc
+#    key-password: password
 
 logging:
   level:
     org.apache.catalina: info
 app:
   msg: DEV
+
+hkjc:
+  logging:
+    logger-name: SpringTraining
+
 
 
 
